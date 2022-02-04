@@ -23,8 +23,6 @@ android {
     defaultConfig {
         minSdkVersion safeExtGet('SimpleJsi_minSdkVersion', 16)
         targetSdkVersion safeExtGet('SimpleJsi_targetSdkVersion', 29)
-        versionCode 1
-        versionName "1.0"
 
         externalNativeBuild {
             cmake {
