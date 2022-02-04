@@ -8,12 +8,16 @@ import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.ReactInstanceManager;
+import com.facebook.react.bridge.JSIModulePackage;
 import com.facebook.soloader.SoLoader;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
+import com.reactnativesimplejsi.SimpleJsiModulePackage;
 import com.reactnativesimplejsi.SimpleJsiPackage;
+
+import androidx.annotation.Nullable;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -32,6 +36,12 @@ public class MainApplication extends Application implements ReactApplication {
         // packages.add(new MyReactNativePackage());
         packages.add(new SimpleJsiPackage());
         return packages;
+      }
+
+      @Nullable
+      @Override
+      protected JSIModulePackage getJSIModulePackage() {
+        return new SimpleJsiModulePackage();
       }
 
       @Override
