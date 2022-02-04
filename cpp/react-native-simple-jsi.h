@@ -1,8 +1,15 @@
-#ifndef EXAMPLE_H
-#define EXAMPLE_H
+#ifndef REACT_NATIVE_SIMPLE_JSI_H
+#define REACT_NATIVE_SIMPLE_JSI_H
 
-namespace example {
-  int multiply(float a, float b);
+namespace facebook {
+    namespace jsi {
+        class Runtime;
+    }
 }
 
-#endif /* EXAMPLE_H */
+namespace example {
+    void install(facebook::jsi::Runtime &jsiRuntime);
+}
+
+
+#endif /* REACT_NATIVE_SIMPLE_JSI_H */
